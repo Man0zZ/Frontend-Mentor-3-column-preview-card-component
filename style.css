@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lexend Deca", sans-serif;
+  background: hsl(0, 0%, 95%);
+  padding: 70px 0;
+}
+h1 {
+  font-family: "Big Shoulders Display", cursive;
+}
+
+.wrapper {
+  display: grid;
+  /* max-height: 100vh; */
+  width: 70%;
+  margin: auto;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto 30%;
+  grid-template-areas:
+    "container1 container2 container3"
+    "container1 container2 container3"
+    "container1 container2 container3"
+    "attribution attribution attribution";
+}
+
+.container1 {
+  grid-area: container1;
+  background: hsl(31, 77%, 52%);
+  padding: 40px 55px;
+  border-start-start-radius: 15px;
+  border-end-start-radius: 15px;
+  line-height: 25px;
+}
+.container2 {
+  grid-area: container2;
+  background: hsl(184, 100%, 22%);
+  padding: 40px 55px;
+  line-height: 25px;
+}
+.container3 {
+  grid-area: container3;
+  background: hsl(179, 100%, 13%);
+  padding: 40px 55px;
+  border-start-end-radius: 15px;
+  border-end-end-radius: 15px;
+  line-height: 25px;
+}
+.attribution {
+  grid-area: attribution;
+  text-align: center;
+  align-self: center;
+  /* position: relative;
+  top: 70px; */
+}
+h1 {
+  color: hsl(0, 0%, 95%);
+  margin: 25px 0;
+}
+.text {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 15px;
+}
+button {
+  padding: 10px 30px;
+  border: solid hsla(0, 0%, 100%, 0.75);
+  border-radius: 20px;
+  margin-top: 70px;
+  font-family: "Lexend Deca", sans-serif;
+}
+.btn1 {
+  color: hsl(31, 77%, 52%);
+}
+.btn2 {
+  color: hsl(184, 100%, 22%);
+}
+.btn3 {
+  color: hsl(179, 100%, 13%);
+}
+
+.attribution {
+  font-size: 15px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 60%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto 10%;
+    grid-template-areas:
+      "container1"
+      "container2"
+      "container3"
+      "attribution";
+  }
+
+  .container1 {
+    padding: 50px 50px;
+    border-start-end-radius: 15px;
+    border-end-start-radius: 0px;
+  }
+  .container2 {
+    padding: 50px 50px;
+  }
+  .container3 {
+    padding: 50px 55px;
+    border-start-end-radius: 0px;
+    border-end-start-radius: 15px;
+  }
+  button {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .wrapper {
+    width: 90%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto 10%;
+    grid-template-areas:
+      "container1"
+      "container2"
+      "container3"
+      "attribution";
+  }
+
+  .container1 {
+    padding: 50px 50px;
+    border-start-end-radius: 15px;
+    border-end-start-radius: 0px;
+  }
+  .container2 {
+    padding: 50px 50px;
+  }
+  .container3 {
+    padding: 50px 55px;
+    border-start-end-radius: 0px;
+    border-end-start-radius: 15px;
+  }
+  button {
+    margin-top: 30px;
+  }
+}
